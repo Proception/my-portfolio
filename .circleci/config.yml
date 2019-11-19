@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/my-portfolio
+    docker:
+      - image: circleci/node:9.7.1-stretch
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@5'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - run:
+          name: test
+          command: npm test
