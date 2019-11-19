@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.side-menu-card-container {
+  display: block;
+  margin-right: 10px;
+  max-width: 330px;
+  margin-top: 100px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.side-menu-card {
+  max-width: 100%;
+  min-height: 75vh;
+  background: rgba(255, 255, 255, 0.9);
+  mix-blend-mode: normal;
+  border: 0.2px solid #C4C4C4;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.10);
+  border-radius: 5px;
+  margin-right: auto;
+  margin-left:  auto;
+}
+
+.side-menu-content {
+  margin: 5%;// margin-top: 26%;
+}
+
+.side-menu-list {
+  padding: 0px;
+}
+
+.side-menu-item-link{
+  text-decoration:none;
+  color: #595959;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.side-menu-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.text-space{
+  margin-bottom: 7px;
+}
+
+.side-menu-item-link:hover {
+  color: rgba(254, 133, 65, 0.72);
+}
+
+.side-menu-item-image img {
+  max-width: 60px;
+  max-height: 60px;
+  // padding-right: 10px;
+}

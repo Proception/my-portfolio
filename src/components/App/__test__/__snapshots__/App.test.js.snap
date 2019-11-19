@@ -1,7 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component 1`] = `
-<div>
-  My portfolio
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12 col-md-4 col-lg-4 col-xl-4"
+    >
+      photo
+    </div>
+    <div
+      className="col-sm-12 col-md-8 col-lg-8 col-xl-8"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm-12 col-md-12 col-lg-12 col-xl-12"
+        >
+          sfdfdsfsdfs
+        </div>
+        <div
+          className="col-sm-12 col-md-12 col-lg-12 col-xl-12"
+        >
+          dssfsfsdfsdfsf
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+    >
+      .col
+    </div>
+    <div
+      className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+    >
+      .col
+    </div>
+    <div
+      className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+    >
+      .col
+    </div>
+    <div
+      className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+    >
+      .col
+    </div>
+    <div
+      className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+    >
+      .col
+    </div>
+  </div>
+  <div
+    className="row"
+  />
 </div>
 `;
