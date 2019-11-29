@@ -37,7 +37,7 @@ class Tabs extends Component {
 
     return (
       <div className="tabs">
-        <ol className=" top-container tab-list">
+        <ol className="tab-list">
           {children.map((child) => {
             if(child) {
               const { label, imgUrl, onClickTabItem } = child.props;

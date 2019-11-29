@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Photo from '../components/Profile/Photo/Photo.jsx';
-import Summary from '../components/Profile/Summary/Summary.jsx';
-import ContactInfo from '../components/Profile/ContactInfo/ContactInfo.jsx';
 import EmploymentHistory from '../components/Employment/EmploymentHistory.jsx';
+import Profile from '../components/Profile/Profile.jsx';
 import Tabs from '../components/TabView/Tabs.jsx';
+import DisplayCard from '../components/DisplayCard/DisplayCard.jsx';
 
 import './portfolio.scss';
 
@@ -75,7 +74,11 @@ export default class PortfolioView extends Component {
         location: 'Madrid, Spain'
       },
     ];
-    return employmentHistoryData.map( data => <EmploymentHistory {...data} /> );
+    return <DisplayCard className = {'employment-history-card'}>
+      {
+        employmentHistoryData.map( data => <EmploymentHistory {...data} /> )
+      }
+    </DisplayCard>;
   }
 
   renderTabContent = () => {
@@ -96,15 +99,7 @@ export default class PortfolioView extends Component {
       <Fragment>
         <div className={'top-container'}>
           <Container>
-            <Row>
-              <Col sm="12" md="3" lg="3" xl="3">photo</Col>
-              <Col sm="12" md="9" lg="9" xl="9">
-                <Row>
-                  <Col sm="12" md="12" lg="12" xl="12">{'Benedict Esimaje'}</Col>
-                  <Col sm="12" md="12" lg="12" xl="12">{'Fullstack web developer with experience working with Java, Javscript and Python. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '}</Col>
-                </Row>
-              </Col>
-            </Row>
+            <Profile />
             <Row>
               <Tabs  activeTab={this.state.activeTab}>
                 {
@@ -114,13 +109,15 @@ export default class PortfolioView extends Component {
             </Row>
           </Container>
         </div>
-        <Container>
-          <Row>
-            {
-              this.renderTabContent()
-            }
-          </Row>
-        </Container>
+        <div className={'bottom-container'}>
+          <Container>
+            <Row>
+              {
+                this.renderTabContent()
+              }
+            </Row>
+          </Container>
+        </div>
       </Fragment>
     );
   }
