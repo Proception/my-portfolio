@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
-    "test": "jest --config=jest.config.json -u --runInBand --no-cache --coverage --colors --verbose"
+    "build": "webpack --env.ENVIRONMENT=production --mode production",
+    "test": "jest --config=jest.config.json -u --runInBand --no-cache --coverage --colors --verbose",
+    "start": "node server.js",
+    "heroku-prebuild": "npm run-script install",
+    "heroku-postbuild": "npm run-script build"
   },
   "jest": {
     "collectCoverage": true,
@@ -63,6 +66,7 @@
     "node-sass": "^4.13.0",
     "react-test-renderer": "^16.8.6",
     "sass-loader": "^8.0.0",
+    "url-loader": "^2.0.1",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.3",
     "webpack-dev-server": "^3.7.1"
@@ -73,6 +77,8 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

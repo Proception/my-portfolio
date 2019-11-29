@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const DisplayCard = (props) => {
   return (
-    <div class= {props.class}>
+    <div class= {props.className}>
       {props.children}
     </div>
   );

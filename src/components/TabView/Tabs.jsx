@@ -27,7 +27,6 @@ class Tabs extends Component {
 
   render() {
     const {
-      onClickTabItem,
       props: {
         children,
       },
@@ -41,28 +40,19 @@ class Tabs extends Component {
         <ol className="tab-list">
           {children.map((child) => {
             if(child) {
-              const { label, imgUrl } = child.props;
-
+              const { label, imgUrl, onClickTabItem } = child.props;
               return (
                 <Tab
                   activeTab={activeTab}
                   key={label}
                   label={label}
                   imgUrl={imgUrl}
-                  onClick={this.props.activeTab ? '' : onClickTabItem}
+                  onClick={onClickTabItem}
                 />
               );
             }
           })}
         </ol>
-        <div className="tab-content">
-          {children.map((child) => {
-            if(child) {
-              if (child.props.label !== activeTab) return undefined;
-              return child.props.children;
-            }
-          })}
-        </div>
       </div>
     );
   }
