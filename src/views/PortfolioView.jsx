@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from 'react';
+import axios from 'axios';
 import { Container, Row, Col } from 'reactstrap';
 import EmploymentHistory from '../components/Employment/EmploymentHistory.jsx';
+import Education from '../components/Education/Education.jsx';
 import Profile from '../components/Profile/Profile.jsx';
 import Tabs from '../components/TabView/Tabs.jsx';
 import DisplayCard from '../components/DisplayCard/DisplayCard.jsx';
+import Articles from '../components/Articles/Articles.jsx';
 
 import './portfolio.scss';
 
@@ -11,7 +14,24 @@ import './portfolio.scss';
 export default class PortfolioView extends Component {
 
   state = {
-    activeTab: 'Employment'
+    activeTab: 'Employment',
+    articles: [
+      {title: 'An Encounter with Travis CI', url: 'www.benedictesimaje.com', description: `Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, 
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...`, tags: ['Continous Integration', 'Travis'],
+      createdAt: '10-12-2018'}, 
+      {title: 'Adapting to Bootcamp challenges', url: 'www.benedictesimaje.com', description: `Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, 
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...`, tags: ['learning', 'challenges', 'growth']}
+    ]
+  }
+
+  componentDidMount() {
+
   }
 
   setActiveTab = (activeTab) => {
@@ -21,6 +41,22 @@ export default class PortfolioView extends Component {
       };
     }, () => { }
     );
+  }
+
+  getArticles = () => {
+    const mediumUrl = 'https://medium.com/@omasan.esimaje/latest?format=json';
+    axios.get(mediumUrl)
+      .then( (response) => {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
   }
 
   renderEmploymentHistory = () => {
@@ -81,17 +117,57 @@ export default class PortfolioView extends Component {
     </DisplayCard>;
   }
 
+  renderEducation = () => {
+    const educationData = [
+      {
+        degree: 'Computer Science, MSc.',
+        startDate: '2017',
+        endDate: '2018',
+        university: 'University of Lagos',
+        description: `Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, 
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+      },
+      {
+        degree: 'Computer Science, BSc.',
+        startDate: '2010',
+        endDate: '2014',
+        university: 'Benson Idahosa University',
+        description: `Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, 
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+      },
+    ];
+    return <DisplayCard className = {'employment-history-card'}>
+      {
+        educationData.map( data => <Education {...data} /> )
+      }
+    </DisplayCard>;
+  }
+
+  renderArticles = () => {
+    return <Articles articlesData={this.state.articles} />;
+  }
+
   renderTabContent = () => {
     switch (this.state.activeTab) {
     case 'Employment':
       return this.renderEmploymentHistory();
+    case 'Education':
+      return this.renderEducation();
+    case 'Articles':
+      return this.renderArticles();
     default:
       return '';
     }
   }
 
   renderTabMenu = () => {
-    const menuItems = ['Employment', 'Skills', 'Education', 'Projects', 'About'];
+    const menuItems = ['Employment', 'Skills', 'Education', 'Projects', 'Articles'];
     return menuItems.map(menu => <div label={menu} onClickTabItem= {this.setActiveTab}></div>);
   }
   render() {

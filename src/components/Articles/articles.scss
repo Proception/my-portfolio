@@ -1,0 +1,89 @@
+.about {
+  // padding: 30px;
+}
+
+.article-row {
+
+}
+
+.tags {
+  padding: 3px;
+  color: white;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  border-radius: 7px;
+  margin: 5px;
+  background-color: #2867B2;
+}
+
+.article-description {
+  // padding: 3px;
+  color: #515050;
+  font-family: Roboto;
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  margin: 5px;
+}
+
+.article-title {
+  // padding: 3px;
+  color: #2867B2;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  margin: 5px;
+}
+
+.articles-card {
+  min-width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 15px rgba(81, 80, 80, 0.08);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.articles-card:hover {
+  box-shadow: 0px 0px 0px rgba(81, 80, 80, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.read-more {
+  color: #515050;
+  font-family: Roboto;
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  margin: 5px;
+}
+
+.date-created {
+  color: #515050;
+  font-family: Roboto;
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  margin: 5px;
+  text-align: right;
+}
