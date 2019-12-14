@@ -1,0 +1,68 @@
+.project-card {
+  max-width: 22%;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 15px rgba(81, 80, 80, 0.08);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 15px;
+  margin-right: 30px;
+  text-align: center;
+}
+.project-image{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.project-title {
+  max-width: 70%;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  margin: 5px;
+  color: #515050;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-description {
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  color: #828282;
+  margin-bottom: 15px;
+}
+
+.project-button {
+  max-width: 60%;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: none; // mac ff fix
+  -webkit-font-smoothing: antialiased; // safari mac nicer
+  -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+  border-radius: 7px;
+  border: 1px solid #2867B2;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #2867B2;
+}
+
+.project-button:hover {
+  background-color: #2867B2;
+  color: #FFFFFF;
+  cursor: pointer;
+}
