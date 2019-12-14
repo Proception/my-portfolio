@@ -7,6 +7,7 @@ import Profile from '../components/Profile/Profile.jsx';
 import Tabs from '../components/TabView/Tabs.jsx';
 import DisplayCard from '../components/DisplayCard/DisplayCard.jsx';
 import Articles from '../components/Articles/Articles.jsx';
+import Projects from '../components/Projects/Projects.jsx';
 
 import './portfolio.scss';
 
@@ -153,6 +154,66 @@ export default class PortfolioView extends Component {
     return <Articles articlesData={this.state.articles} />;
   }
 
+  renderProjects = () => {
+    const projectsData = [
+      {
+        img: '', 
+        title: 'Cookstar',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.cookstar.com'
+      },
+      {
+        img: '', 
+        title: 'Email Campaign Manager',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.cookstar.com'
+      },
+      {
+        img: '', 
+        title: 'Travela',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'travela.andela.com'
+      },
+      {
+        img: '', 
+        title: 'Entraded',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.cookstar.com'
+      },
+      {
+        img: '', 
+        title: 'MainGate',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.cookstar.com'
+      },
+      {
+        img: '', 
+        title: 'Civic Genius',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.cookstar.com'
+      },
+      {
+        img: '', 
+        title: 'Clarep',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.cookstar.com'
+      },
+      {
+        img: '', 
+        title: 'Elsculture',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.cookstar.com'
+      },
+      {
+        img: '', 
+        title: 'NewDev',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        link: 'www.newdev.tech'
+      }
+    ];
+    return <Projects projects ={projectsData}/>;
+  }
+
   renderTabContent = () => {
     switch (this.state.activeTab) {
     case 'Employment':
@@ -161,6 +222,8 @@ export default class PortfolioView extends Component {
       return this.renderEducation();
     case 'Articles':
       return this.renderArticles();
+    case 'Projects': 
+      return this.renderProjects();
     default:
       return '';
     }
