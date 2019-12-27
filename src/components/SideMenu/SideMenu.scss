@@ -2,9 +2,7 @@
 
 .side-menu-card-container {
   display: block;
-  margin-right: 10px;
-  max-width: 330px;
-  margin-top: 100px;
+  max-width: 100%;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -12,14 +10,15 @@
 
 .side-menu-card {
   max-width: 100%;
-  min-height: 75vh;
-  background: rgba(255, 255, 255, 0.9);
+  height: auto;
+  background: #FFFFFF;
   mix-blend-mode: normal;
-  border: 0.2px solid #C4C4C4;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.10);
-  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(81, 80, 80, 0.08);
+  border-radius: 10px;
   margin-right: auto;
   margin-left:  auto;
+  padding: 15px;
+  margin-bottom: 50px;
 }
 
 .side-menu-content {
@@ -40,8 +39,24 @@
 }
 
 .side-menu-item {
-  display: inline-flex;
-  align-items: center;
+  display: block;
+  text-align: center;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+
+.side-menu-item-active {
+  display: block;
+  text-align: center;
+  border: 1px solid #2867B2;
+  border-radius: 5px;
+  color: #2867B2;
+}
+
+.side-menu-item:hover {
+  color: #2867B2;
+  background-color: rgb(243, 246, 250);
+  border-radius: 10px;
 }
 
 .text-space{
@@ -53,7 +68,10 @@
 }
 
 .side-menu-item-image img {
-  max-width: 60px;
-  max-height: 60px;
-  // padding-right: 10px;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.side-menu-item-image {
+  width: 100%;
 }

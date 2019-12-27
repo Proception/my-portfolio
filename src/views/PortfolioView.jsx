@@ -8,6 +8,7 @@ import Tabs from '../components/TabView/Tabs.jsx';
 import DisplayCard from '../components/DisplayCard/DisplayCard.jsx';
 import Articles from '../components/Articles/Articles.jsx';
 import Projects from '../components/Projects/Projects.jsx';
+import Skills from '../components/Skills/Skills.jsx';
 
 import './portfolio.scss';
 
@@ -214,6 +215,10 @@ export default class PortfolioView extends Component {
     return <Projects projects ={projectsData}/>;
   }
 
+  renderSkills = () => {
+    return <Skills />;
+  }
+
   renderTabContent = () => {
     switch (this.state.activeTab) {
     case 'Employment':
@@ -224,6 +229,8 @@ export default class PortfolioView extends Component {
       return this.renderArticles();
     case 'Projects': 
       return this.renderProjects();
+    case 'Skills':
+      return this.renderSkills();
     default:
       return '';
     }
