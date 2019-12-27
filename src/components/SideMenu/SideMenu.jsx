@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import DisplayCard from '../DisplayCard/DisplayCard.jsx';
+
+import javaIcon from '../../assets/java-icon.png';
+import javascriptIcon from '../../assets/javascript-icon.png';
+import pythonIcon from '../../assets/python-icon.png';
+import designIcon from '../../assets/paint-icon.png';
+import settingsIcon from '../../assets/settings.png';
 import './SideMenu.scss';
+
+
 
 export default class SideMenu extends Component {
 
@@ -9,23 +17,39 @@ export default class SideMenu extends Component {
 
   generateSideMenuItems = () => {
     const {
-      viewRequest,
-      newRequest,
-      browseChef,
-      requestHistory,
-      pendingRequest
+      displayStack,
+      viewJava,
+      viewPython,
+      viewJavascript,
+      viewDesign,
+      viewWorkTools
     } = this.props;
 
     const  menuItems = [
       {
-        imgUrl: addIcon,
-        menuValue: 'New Request',
-        action: newRequest
+        imgUrl: javaIcon,
+        menuValue: 'Java',
+        action: viewJava
       },
       {
-        imgUrl: viewIcon,
-        menuValue: 'View Requests',
-        action: viewRequest
+        imgUrl: pythonIcon,
+        menuValue: 'Python',
+        action: viewPython
+      },
+      {
+        imgUrl: javascriptIcon,
+        menuValue: 'Javascript',
+        action: viewJavascript
+      },
+      {
+        imgUrl: designIcon,
+        menuValue: 'UI/UX Design',
+        action: viewDesign
+      },
+      {
+        imgUrl: settingsIcon,
+        menuValue: 'Work Tools',
+        action: viewWorkTools
       }
     ];
     return menuItems.map(menuItem => <a className="side-menu-item-link" onClick={() => menuItem.action()} >
@@ -42,7 +66,7 @@ export default class SideMenu extends Component {
   render() {
     return (
       <div className={'side-menu-card-container'}>
-        <DisplayCard class={'side-menu-card'}>
+        <DisplayCard className={'side-menu-card'}>
           <div className="side-menu-content">
             <div className="side-menu-list">
               {
