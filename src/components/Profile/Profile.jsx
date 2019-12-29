@@ -4,7 +4,8 @@ import Photo from './Photo/Photo.jsx';
 import ContactInfo from './ContactInfo/ContactInfo.jsx';
 import Summary from './Summary/Summary.jsx';
 
-const summaryData = 'Fullstack web developer with experience working with Java, Javscript and Python. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ';
+
+const summaryData = 'Fullstack web developer with 4 years experience working with Java, Javscript and Python. I am very passionate about the quality of work I deliver and the impact it makes in the lives of the stakeholders. I have interest in machine learning and Big Data with tools like hadoop and pentaho.';
 
 const Profile = () => {
   return (
