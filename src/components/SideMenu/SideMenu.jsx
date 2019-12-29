@@ -29,31 +29,36 @@ export default class SideMenu extends Component {
       {
         imgUrl: javaIcon,
         menuValue: 'Java',
-        action: viewJava
+        menuId: 'java',
+        action: viewJava,
       },
       {
         imgUrl: pythonIcon,
         menuValue: 'Python',
+        menuId: 'python',
         action: viewPython
       },
       {
         imgUrl: javascriptIcon,
         menuValue: 'Javascript',
+        menuId: 'javascript',
         action: viewJavascript
       },
       {
         imgUrl: designIcon,
         menuValue: 'UI/UX Design',
+        menuId: 'design',
         action: viewDesign
       },
       {
         imgUrl: settingsIcon,
         menuValue: 'Work Tools',
+        menuId: 'worktools',
         action: viewWorkTools
       }
     ];
     return menuItems.map(menuItem => <a className="side-menu-item-link" onClick={() => menuItem.action()} >
-      <div className="side-menu-item ">
+      <div className={`${displayStack === menuItem.menuId ? 'side-menu-item-active' : 'side-menu-item'}` }>
         <div className="side-menu-item-image">
           <img src={menuItem.imgUrl} />
         </div>

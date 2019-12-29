@@ -4,6 +4,16 @@ import { Container, Row, Col } from 'reactstrap';
 import TechSkills from './Tech/Tech.jsx';
 import SoftSkills from './Soft/Soft.jsx';
 
+import adapt from '../../assets/adapt.png';
+import culture from '../../assets/culture.png';
+import communication from '../../assets/communication.png';
+import solver from '../../assets/solver.png';
+import team from '../../assets/team.png';
+import focused from '../../assets/focused.png';
+import fun from '../../assets/fun.png';
+import learner from '../../assets/learner.png';
+import somuchmore from '../../assets/somuchmore.png';
+
 
 import './skills.scss';
 
@@ -61,11 +71,15 @@ export default class Skills extends Component {
 
   renderSoftSkills = () => {
     const skills = [
-      {logo: 'https://picsum.photos/70', skill: 'Team Player'},
-      {logo: 'https://picsum.photos/70', skill: 'Adaptive Skills'},
-      {logo: 'https://picsum.photos/70', skill: 'Communication Skills'},
-      {logo: 'https://picsum.photos/70', skill: 'Cultural Awareness'},
-      {logo: 'https://picsum.photos/70', skill: 'Cultural Awareness'},
+      {logo: team, skill: 'Team Player'},
+      {logo: adapt, skill: 'Adaptive'},
+      {logo: communication, skill: 'Effective Communicator'},
+      {logo: culture, skill: 'Culturally Aware'},
+      {logo: solver, skill: 'Problem Solver'},
+      {logo: fun, skill: 'Super Fun'},
+      {logo: focused, skill: 'Focused'},
+      {logo: learner, skill: 'Lifelong Learner'},
+      {logo: somuchmore, skill: 'And Much More'},
     ];
     return <div className={'soft-skills-container'}><SoftSkills skills={skills}/></div>;
   }
@@ -78,6 +92,7 @@ export default class Skills extends Component {
     ];
     return <TechSkills skills={skills} />;
   }
+
   render() {
     return <div className={'skills-container'}>
       <div className={'skills-header'}>

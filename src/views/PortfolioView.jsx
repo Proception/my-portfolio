@@ -10,6 +10,16 @@ import Articles from '../components/Articles/Articles.jsx';
 import Projects from '../components/Projects/Projects.jsx';
 import Skills from '../components/Skills/Skills.jsx';
 
+import cookstar from '../assets/cookstar.png';
+import ecobank from '../assets/ecobank.png';
+import travela from '../assets/travela.png';
+import entraded from '../assets/entraded.png';
+import maingate from '../assets/maingate.png';
+import civicgenius from '../assets/civicgenius.png';
+import clarep from '../assets/clarep.png';
+import elsculture from '../assets/elsculture.gif';
+import newdev from '../assets/newdev.png';
+
 import './portfolio.scss';
 
 
@@ -158,57 +168,57 @@ export default class PortfolioView extends Component {
   renderProjects = () => {
     const projectsData = [
       {
-        img: '', 
+        img: cookstar, 
         title: 'Cookstar',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
-        link: 'www.cookstar.com'
+        description: 'A cook for hire service built with the following tools; Javascript, Node, Express, Postgres, React, Redux, and Sequelize', 
+        link: 'www.cookstar.org'
       },
       {
-        img: '', 
+        img: ecobank, 
         title: 'Email Campaign Manager',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
-        link: 'www.cookstar.com'
+        description: 'An email campaign manager built with the following tools; Java, Bootfaces, Primefaces, Java Server Faces, Hibernate, OracleDB,  and GrapeJS', 
+        link: ''
       },
       {
-        img: '', 
+        img: travela, 
         title: 'Travela',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        description: 'A travel management tool built to handle travel related requests within Andela. It was built with Javascript, Node, Express, Postgres, React, Redux, Python, Flask, and Sequelize', 
         link: 'travela.andela.com'
       },
       {
-        img: '', 
+        img: entraded, 
         title: 'Entraded',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
-        link: 'www.cookstar.com'
+        description: 'A personal AI driven Crypto Trading platform was built with Javascript, Node, Express, Postgres, React, Redux, Python, Flask, and Sequelize', 
+        link: 'www.entraded.com'
       },
       {
-        img: '', 
+        img: maingate, 
         title: 'MainGate',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
-        link: 'www.cookstar.com'
+        description: 'A property web application built to help users find their desired homes and allow agents post houses. It was built with Python/Django, MySQL, HTML/CSS, Django Templating Language and Django ORM ', 
+        link: 'www.maingate.ng'
       },
       {
-        img: '', 
+        img: civicgenius, 
         title: 'Civic Genius',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
-        link: 'www.cookstar.com'
+        description: 'A  web app and android game built with Java/Spring, Vanilla Javascript, Java/Android, bootstrap and MySQL', 
+        link: ''
       },
       {
-        img: '', 
+        img: clarep, 
         title: 'Clarep',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
-        link: 'www.cookstar.com'
+        description: 'A Centre for Language Research and English Proficiency. It was built with Joomla, HTML/CSS, MySQL and PHP.', 
+        link: 'www.clarep.org'
       },
       {
-        img: '', 
+        img: elsculture, 
         title: 'Elsculture',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
-        link: 'www.cookstar.com'
+        description: 'A pan African organisation that aims to promote, foster, and celebrate the growth and diversity of contemporary African culture in the Nigerian Entertainment Industry. It was built with Joomla, HTML/CSS, MySQL and PHP.', 
+        link: 'www.elsculture.com.ng'
       },
       {
-        img: '', 
+        img: newdev, 
         title: 'NewDev',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+        description: 'A web application meant to help new developers through a learning path. It was built with Javascript, Node, Express, Postgres, React, Redux, and Sequelize', 
         link: 'www.newdev.tech'
       }
     ];

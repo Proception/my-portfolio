@@ -65,7 +65,7 @@
   }
 
   .name {
-    color: #2867B2;;
+    color: #2867B2;
     text-align: left;
     justify-items: center;
     font-size: 26px;
@@ -87,16 +87,24 @@
     -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
     padding-top: 10px;
   }
+
+  .icon-url {
+    margin-right: 10px;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+
   .social-icons {
     padding-top: 10px;
   }
 
   .social-icons img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 28px;
+    max-height: 28px;
     text-align: left;
-    cursor: pointer;
   }
+
+
 
   .contact-text{
     font-family: Roboto;
@@ -104,5 +112,10 @@
     font-weight: normal;
     font-size: 14px;
     color: #515050;
+    margin-left: 5px;
     cursor: pointer;
+  }
+
+  .contact-text:hover{
+    color: #2867B2;
   }
