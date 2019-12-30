@@ -1,5 +1,5 @@
 .project-card {
-  max-width: 22%;
+  width: 22%;
   height: auto;
   background: #FFFFFF;
   box-shadow: 0px 10px 15px rgba(81, 80, 80, 0.08);
@@ -43,6 +43,11 @@
   margin-bottom: 15px;
 }
 
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project-button {
   max-width: 60%;
   font-family: Roboto;
@@ -71,3 +76,21 @@
   max-width: 100px;
   max-height: 100px;
 }
+
+   /* Portrait */
+   @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 667px) 
+   and (-webkit-min-device-pixel-ratio: 2)
+   and (orientation: portrait) {
+    .project-card {
+      width: 300px;
+      text-align: center;
+      margin-right: 0px;
+    }
+
+    .project-container {
+      justify-content: center;
+      
+    }
+   }
