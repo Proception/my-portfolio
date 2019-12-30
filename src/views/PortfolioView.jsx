@@ -19,6 +19,10 @@ import civicgenius from '../assets/civicgenius.png';
 import clarep from '../assets/clarep.png';
 import elsculture from '../assets/elsculture.gif';
 import newdev from '../assets/newdev.png';
+import andela from '../assets/andela.png';
+import teamapt from '../assets/teamapt.png';
+import mcentric from '../assets/mcentric.jpeg';
+import pearlsoft from '../assets/pearlsoft.png';
 
 import './portfolio.scss';
 
@@ -83,7 +87,8 @@ export default class PortfolioView extends Component {
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, 
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
-        location: 'Lagos, Nigeria'
+        location: 'Lagos, Nigeria',
+        imgUrl: andela
       },
       {
         companyName: 'TeamApt',
@@ -95,7 +100,8 @@ export default class PortfolioView extends Component {
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, 
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
-        location: 'Lagos, Nigeria'
+        location: 'Lagos, Nigeria',
+        imgUrl: teamapt
       },
       {
         companyName: 'PearlSoft',
@@ -107,7 +113,8 @@ export default class PortfolioView extends Component {
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, 
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
-        location: 'Lagos, Nigeria'
+        location: 'Lagos, Nigeria',
+        imgUrl: pearlsoft
       },
       {
         companyName: 'mCentric',
@@ -119,14 +126,15 @@ export default class PortfolioView extends Component {
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, 
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
-        location: 'Madrid, Spain'
+        location: 'Madrid, Spain',
+        imgUrl: mcentric
       },
     ];
-    return <DisplayCard className = {'employment-history-card'}>
+    return <div className={'employment-container'}>
       {
         employmentHistoryData.map( data => <EmploymentHistory {...data} /> )
       }
-    </DisplayCard>;
+    </div>;
   }
 
   renderEducation = () => {
@@ -154,15 +162,15 @@ export default class PortfolioView extends Component {
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
       },
     ];
-    return <DisplayCard className = {'employment-history-card'}>
+    return <div className={'employment-container'}>
       {
-        educationData.map( data => <Education {...data} /> )
+        educationData.map( data => <DisplayCard className = {'employment-history-card'}><Education {...data} /></DisplayCard> )
       }
-    </DisplayCard>;
+    </div>;
   }
 
   renderArticles = () => {
-    return <Articles articlesData={this.state.articles} />;
+    return <div className={'articles-container'}><Articles articlesData={this.state.articles} /></div>;
   }
 
   renderProjects = () => {
@@ -222,7 +230,7 @@ export default class PortfolioView extends Component {
         link: 'www.newdev.tech'
       }
     ];
-    return <Projects projects ={projectsData}/>;
+    return <div className={'project-container'}><Projects projects ={projectsData}/></div>;
   }
 
   renderSkills = () => {

@@ -134,7 +134,6 @@ input[type="radio"].toggle {
 }
 
 .tech-skills-container {
-  display: inline-block;
   min-width: 100%;
 }
 
@@ -171,3 +170,50 @@ input[type="radio"].toggle {
   font-size: 16px;
   font-weight: 500;
 }
+
+
+   /* Portrait */
+   @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 667px) 
+   and (-webkit-min-device-pixel-ratio: 2)
+   and (orientation: portrait) { 
+    .skill-category-label {
+      font-size: 14px;
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .btn2{
+      padding: 5px
+    }
+
+    .btn1 {
+      padding: 5px
+    }
+
+    .skills-content-card {
+      width: 300px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .skill-name {
+      font-size: 12px;
+    }
+
+    .skill-title {
+      font-size: 14px;
+    }
+
+    .soft-skills-container {
+      justify-content: center;
+    }
+
+    .soft-skills-card { 
+      width: 300px;
+      margin-right: 0px;
+    }
+   }

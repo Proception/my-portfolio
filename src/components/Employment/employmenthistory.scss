@@ -5,9 +5,28 @@
   background: #FFFFFF;
   box-shadow: 0px 10px 15px rgba(81, 80, 80, 0.08);
   border-radius: 10px;
-  margin-bottom: 5%;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.employment-container {
+  margin-bottom: 5%;
+}
+
+.employment-image {
+  padding-bottom: 10px;
+}
+
+.employment-image  img {
+  max-width: 60px;
+  max-height: 60px;
+  
+}
+
+.employment-history-card:hover {
+  box-shadow: 0px 0px 0px rgba(81, 80, 80, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .company-column {
@@ -81,3 +100,50 @@
   padding-top: 5px;
   color: #515050;
 }
+
+   /* Portrait */
+   @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 667px) 
+   and (-webkit-min-device-pixel-ratio: 2)
+   and (orientation: portrait) { 
+     .employment-history-card {
+       width: 300px;
+       text-align: center;
+     }
+
+     .employment-container {
+       margin-left: auto;
+       margin-right: auto;
+     }
+
+     .employment-image  img {
+      max-width: 100px;
+      max-height: 100px;
+      
+    }
+    .employment-title {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .employment-time {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    .employment-designation {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .employment-description {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .employment-location {
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+   }

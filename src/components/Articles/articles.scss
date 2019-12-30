@@ -87,3 +87,21 @@
   margin: 5px;
   text-align: right;
 }
+
+
+
+   /* Portrait */
+   @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 667px) 
+   and (-webkit-min-device-pixel-ratio: 2)
+   and (orientation: portrait) {
+    .articles-card{
+      width: 300px;
+    }
+
+    .articles-container {
+      margin-left: auto;
+       margin-right: auto;
+    }
+   }

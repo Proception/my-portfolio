@@ -14,7 +14,7 @@ const copyToClipboard = (e, elementId) => {
 
 const ContactInfo = () => {
   return (
-    <div>
+    <div className={'contact-details'}>
       <div className={'social-icons'}>
         <img src={emailIcon} alt="" /> <span  className={'contact-text'} >{'omasan.esimaje@gmail.com'}</span>
       </div>
