@@ -32,17 +32,13 @@ export default class PortfolioView extends Component {
   state = {
     activeTab: 'Employment',
     articles: [
-      {title: 'An Encounter with Travis CI', url: 'www.benedictesimaje.com', description: `Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, 
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...`, tags: ['Continous Integration', 'Travis'],
+      {title: 'An Encounter with Travis CI', url: 'medium.com/@omasan.esimaje/an-encounter-with-travis-ci-dd50bfbd77a5', description: `This is the mid-week of the Andela Bootcamp and things are starting to get very interesting. 
+        Amidst all the learning and collaboration, 
+        I decided to take a few minutes to write about Travis CI....`, tags: ['Continous Integration', 'Travis'],
       createdAt: '10-12-2018'}, 
-      {title: 'Adapting to Bootcamp challenges', url: 'www.benedictesimaje.com', description: `Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, 
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...`, tags: ['learning', 'challenges', 'growth']}
+      {title: 'Adapting to Bootcamp challenges', url: 'medium.com/@omasan.esimaje/adapting-to-bootcamp-challenges-4b89aa42f7f2', description: `To overcome challenge 1, 
+        I had to seek help from my internal group to know how they went about the writing commit messages and PR request. 
+        I also consulted my LFA(Learning Facilitator Assistant) to review every commit message and PR comments....`, tags: ['learning', 'challenges', 'growth']}
     ]
   }
 
@@ -60,7 +56,7 @@ export default class PortfolioView extends Component {
   }
 
   getArticles = () => {
-    const mediumUrl = 'https://medium.com/@omasan.esimaje/latest?format=json';
+    const mediumUrl = 'http://medium.com/@omasan.esimaje';
     axios.get(mediumUrl)
       .then( (response) => {
         // handle success
@@ -82,11 +78,9 @@ export default class PortfolioView extends Component {
         startDate: '2018',
         endDate: 'Date',
         jobTitle: 'Software Developer',
-        jobDescription: `Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+        jobDescription: `I worked as a software engineer available to be outsourced to top companies around the world. 
+          During my time with Andela, 
+          I worked with the Travela and Merry-ah teams as a Fullstack Javascript Engineer.`,
         location: 'Lagos, Nigeria',
         imgUrl: andela
       },
@@ -95,11 +89,9 @@ export default class PortfolioView extends Component {
         startDate: '2018',
         endDate: '2018',
         jobTitle: 'Software Engineer',
-        jobDescription: `Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+        jobDescription: `I worked on the POS merchant application for Stanbic IBTC called OlymPOS and Aptent.
+          The solution is meant to help POS merchants manage POS transactions carried out on their machines 
+          and help with conflict resolution too. At the time, I served as Fullstack Java Engineer.`,
         location: 'Lagos, Nigeria',
         imgUrl: teamapt
       },
@@ -108,11 +100,9 @@ export default class PortfolioView extends Component {
         startDate: '2017',
         endDate: '2018',
         jobTitle: 'Software Developer',
-        jobDescription: `Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+        jobDescription: `I worked on the Ecobank Email Campaign Manager. 
+          The solution was meant to help the bank send personalized email campaigns to targeted customers 
+          and automatically send personalized birthday email messages to customers based on configuration. I served as a Fullstack Java Engineer.`,
         location: 'Lagos, Nigeria',
         imgUrl: pearlsoft
       },
@@ -121,11 +111,9 @@ export default class PortfolioView extends Component {
         startDate: '2016',
         endDate: '2018',
         jobTitle: 'Quality Assurance Analyst',
-        jobDescription: `Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+        jobDescription: `I worked on the SMMT(Smart Mobile Marketing Tool) solution for Glo and 9mobile. 
+          I was part of the team that tested and deployed the 9Mobile SMMT solution.
+          I also helped design, develop and monitor campaigns defined by the Glo marketing team such as Free Data Day and Double Data.`,
         location: 'Madrid, Spain',
         imgUrl: mcentric
       },
@@ -144,22 +132,19 @@ export default class PortfolioView extends Component {
         startDate: '2017',
         endDate: '2018',
         university: 'University of Lagos',
-        description: `Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+        description: `I carried out research in the area of Artificial intelligence and robotics.
+          I worked with Dr. Chika Yinka-Banjo to design and create a self-driving car using a raspberry pi and an arduino chassis. 
+          It was powered by a power bank and a set of batteries for the motors. 
+          The car used Computer vision to navigate a controlled environment.`
       },
       {
         degree: 'Computer Science, BSc.',
         startDate: '2010',
         endDate: '2014',
         university: 'Benson Idahosa University',
-        description: `Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+        description: `I carried out reasearch in the area of Artificial intelligence and robotics. 
+          I worked with Dr. Maxwell to build an autonomous car powered by a set of batteries. 
+          The car made use of infrared sensors and an ultrasonar sensor to detect obstacles in its path.`
       },
     ];
     return <div className={'employment-container'}>
