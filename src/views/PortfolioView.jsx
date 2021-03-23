@@ -24,6 +24,11 @@ import teamapt from '../assets/teamapt.png';
 import mcentric from '../assets/mcentric.jpeg';
 import pearlsoft from '../assets/pearlsoft.png';
 
+import getir from '../assets/getir-logo.png';
+import noah from '../assets/noah-logo.png';
+import clipboard from '../assets/clipboard-logo.jpeg';
+
+
 import './portfolio.scss';
 
 
@@ -74,9 +79,39 @@ export default class PortfolioView extends Component {
   renderEmploymentHistory = () => {
     const employmentHistoryData = [
       {
+        companyName: 'Getir',
+        startDate: '2021',
+        endDate: 'Present',
+        jobTitle: 'Backend Engineer',
+        jobDescription: `Contributing to the rapid expansion of Getir accross Europe`,
+        location: 'Istanbul, Turkey',
+        imgUrl: getir
+      },
+      {
+        companyName: 'Clipboard Health',
+        startDate: '2020',
+        endDate: '2021',
+        jobTitle: 'Senior Software Engineer',
+        jobDescription: `Part of a team transitioning the monolith app to a microservice architecture
+        Remodelling the app for code quality and readability`,
+        location: 'San Francisco, CA',
+        imgUrl: clipboard
+      },
+      {
+        companyName: 'Noah Homes',
+        startDate: '2020',
+        endDate: '2020',
+        jobTitle: 'Software Developer',
+        jobDescription: `I was part of the team that rolled out 4 new apps to support the core business in May 2020. 
+        These apps were both customer-facing and for staff. 
+        They were crucial to supporting the business process thereby making life easier for Home Owners and Home Advisors.`,
+        location: 'San Francisco, CA',
+        imgUrl: noah
+      },
+      {
         companyName: 'Andela',
         startDate: '2018',
-        endDate: 'Date',
+        endDate: '2020',
         jobTitle: 'Software Developer',
         jobDescription: `I worked as a software engineer available to be outsourced to top companies around the world. 
           During my time with Andela, 
@@ -243,6 +278,8 @@ export default class PortfolioView extends Component {
     const menuItems = ['Employment', 'Skills', 'Education', 'Projects', 'Articles'];
     return menuItems.map(menu => <div label={menu} onClickTabItem= {this.setActiveTab}></div>);
   }
+
+  
   render() {
     return (
       <Fragment>
