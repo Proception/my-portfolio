@@ -86,5 +86,8 @@
     "react-dom": "^16.8.6",
     "reactstrap": "^8.1.1",
     "sinon": "^7.5.0"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
