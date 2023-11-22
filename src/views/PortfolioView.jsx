@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import EmploymentHistory from '../components/Employment/EmploymentHistory.jsx';
 import Education from '../components/Education/Education.jsx';
 import Profile from '../components/Profile/Profile.jsx';
@@ -27,6 +27,7 @@ import pearlsoft from '../assets/pearlsoft.png';
 import getir from '../assets/getir-logo.png';
 import noah from '../assets/noah-logo.png';
 import clipboard from '../assets/clipboard-logo.jpeg';
+import vendease from '../assets/vendease.png';
 
 
 import './portfolio.scss';
@@ -79,11 +80,22 @@ export default class PortfolioView extends Component {
   renderEmploymentHistory = () => {
     const employmentHistoryData = [
       {
+        companyName: 'Vendease',
+        startDate: '2022',
+        endDate: 'Present',
+        jobTitle: 'Senior Software Engineer',
+        jobDescription: `Design and Implementation of a multi tenant architecture. Led a team to design, develop and deploy a menu costing tool. 
+        Led the core services team to centralize authentication and notification services for all apps.`,
+        location: 'Lagos, Nigeria',
+        imgUrl: vendease
+      },
+      {
         companyName: 'Getir',
         startDate: '2021',
-        endDate: 'Present',
+        endDate: '2022',
         jobTitle: 'Backend Engineer',
-        jobDescription: `Contributing to the rapid expansion of Getir accross Europe`,
+        jobDescription: `Design, Implementation, and Monitoring of core and geolocation services. 
+        The services were responsible for defining service availability areas, distance calculation using multiple map providers, providing country information, storing global and country specific configurations, and reverse geocoding.`,
         location: 'Istanbul, Turkey',
         imgUrl: getir
       },
@@ -177,9 +189,9 @@ export default class PortfolioView extends Component {
         startDate: '2010',
         endDate: '2014',
         university: 'Benson Idahosa University',
-        description: `I carried out reasearch in the area of Artificial intelligence and robotics. 
+        description: `I carried out research in the area of Artificial intelligence and robotics. 
           I worked with Dr. Maxwell to build an autonomous car powered by a set of batteries. 
-          The car made use of infrared sensors and an ultrasonar sensor to detect obstacles in its path.`
+          The car made use of infrared sensors and an ultrasonic sensor to detect obstacles in its path.`
       },
     ];
     return <div className={'employment-container'}>

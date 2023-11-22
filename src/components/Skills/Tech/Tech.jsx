@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import SideMenu from '../../SideMenu/SideMenu.jsx';
 import DisplayCard from '../../DisplayCard/DisplayCard.jsx';
 import star from '../../../assets/star.png';
@@ -40,6 +40,7 @@ export default class Tech extends Component {
       ]},
       {title: 'Backend', tools: [
         {skillName: 'Node', rating: 5},
+          {skillName: 'NestJS', rating: 5},
         {skillName: 'Express', rating: 4},
         {skillName: 'Web Pack', rating: 3}
       ]},
@@ -76,6 +77,7 @@ export default class Tech extends Component {
         {skillName: 'Invision', rating: 3},
         {skillName: 'Microsoft Paint', rating: 5},
         {skillName: 'Adobe Photoshop', rating: 2},
+          {skillName: 'Adobe XD', rating: 4},
       ]},
     ],
     worktools: [
@@ -95,12 +97,14 @@ export default class Tech extends Component {
       ]},
       {title: 'Workflow', tools: [
         {skillName: 'Git', rating: 4},
-        {skillName: 'Gitlab', rating: 3},
+        {skillName: 'Gitlab', rating: 5},
         {skillName: 'Github', rating: 5},
         {skillName: 'Bitbucket', rating: 5},
         {skillName: 'Travis CI', rating: 3},
         {skillName: 'Circle CI', rating: 5},
         {skillName: 'Jenkins', rating: 3},
+          {skillName: 'Docker', rating: 5},
+          {skillName: 'Nx', rating: 5},
       ]},
       {title: 'Operating Systems', tools: [
         {skillName: 'Mac OS', rating: 4},
@@ -114,6 +118,18 @@ export default class Tech extends Component {
         {skillName: 'Netbeans', rating: 5},
         {skillName: 'VSCode', rating: 5},
       ]},
+      {title: 'Caching/Messaging Tools', tools: [
+          {skillName: 'Kafka', rating: 4},
+          {skillName: 'NATS Jetstream', rating: 4},
+          {skillName: 'Redis', rating: 5},
+        ]},
+      {title: 'Monitoring Tools', tools: [
+          {skillName: 'New Relic', rating: 5},
+          {skillName: 'Sentry', rating: 4},
+          {skillName: 'Data dog', rating: 5},
+          {skillName: 'AWS Lens', rating: 5},
+          {skillName: 'AWS Logs', rating: 5},
+        ]},
     ],
   }
 

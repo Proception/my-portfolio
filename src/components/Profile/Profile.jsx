@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col } from 'reactstrap';
 import Photo from './Photo/Photo.jsx';
 import ContactInfo from './ContactInfo/ContactInfo.jsx';
 import Summary from './Summary/Summary.jsx';
 
 
-const summaryData = 'Fullstack web developer with 4 years experience working with Java, Javscript and Python. I am very passionate about the quality of work I deliver and the impact it makes in the lives of the stakeholders. I have interest in machine learning and Big Data with tools like hadoop and pentaho.';
+const summaryData = 'Fullstack web developer with 7 years experience working with Java, Javascript and Python. I am very passionate about the quality of work I deliver and the impact it makes in the lives of the stakeholders. I have experience building machine learning and Big Data solutions with tools like tensorflow, raspberry pi, hadoop and pentaho.';
 
 const Profile = () => {
   return (
